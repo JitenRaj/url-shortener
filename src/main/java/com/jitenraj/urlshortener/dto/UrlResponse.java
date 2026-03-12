@@ -10,6 +10,5 @@ public class UrlResponse {
     private String url;
     private String shortCode;
     private LocalDateTime createdAt;
-    private LocalDateTime updatedAt;
     private Integer accessCount;
 }

@@ -33,9 +33,6 @@ public class UrlEntity {
     @Column(updatable = false)
     private LocalDateTime createdAt;
 
-    @UpdateTimestamp
-    private LocalDateTime updatedAt;
-
     @Column(nullable = false)
     @Builder.Default
     private Integer accessCount = 0;
