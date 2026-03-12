@@ -31,13 +31,6 @@ public class UrlController {
                 .build();
     }
 
-    @PutMapping("/{shortCode}")
-    public ResponseEntity<UrlResponse> updateShortUrl(
-            @PathVariable String shortCode,
-            @Valid @RequestBody UrlRequest request) {
-        return ResponseEntity.ok(urlService.updateShortUrl(shortCode, request));
-    }
-
     @GetMapping("/{shortCode}/stats")
     public ResponseEntity<UrlResponse> getUrlStats(@PathVariable String shortCode) {
         return ResponseEntity.ok(urlService.getUrlStats(shortCode));

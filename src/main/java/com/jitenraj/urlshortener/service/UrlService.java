@@ -46,15 +46,6 @@ public class UrlService {
         return mapToResponse(entity);
     }
 
-    public UrlResponse updateShortUrl(String shortCode, UrlRequest request) {
-        UrlEntity entity = urlRepository.findByShortCode(shortCode)
-                .orElseThrow(() -> new ResponseStatusException(HttpStatus.NOT_FOUND, "Short URL not found"));
-
-        entity.setUrl(request.getUrl());
-        UrlEntity updatedEntity = urlRepository.save(entity);
-        return mapToResponse(updatedEntity);
-    }
-
     public void deleteShortUrl(String shortCode) {
         UrlEntity entity = urlRepository.findByShortCode(shortCode)
                 .orElseThrow(() -> new ResponseStatusException(HttpStatus.NOT_FOUND, "Short URL not found"));
