@@ -72,7 +72,6 @@ public class UrlService {
         response.setUrl(entity.getUrl());
         response.setShortCode(entity.getShortCode());
         response.setCreatedAt(entity.getCreatedAt());
-        response.setUpdatedAt(entity.getUpdatedAt());
         response.setAccessCount(entity.getAccessCount());
         return response;
     }
